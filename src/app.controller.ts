@@ -14,6 +14,6 @@ export class AppController {
   @Post()
   test(@Req() request: any): any {
     console.log(request.body)
-    return request.body
+    return request.body.embeds
   }
 }
