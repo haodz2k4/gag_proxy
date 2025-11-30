@@ -13,7 +13,9 @@ export class AppController {
 
   @Post()
   test(@Req() request: any): any {
-    console.log(request.body)
+    console.log(request.body.embeds)
+    console.log(request.body.embeds[0].thumbnail)
+    console.log(request.body.embeds[0].fields)
     return request.body.embeds
   }
 }
