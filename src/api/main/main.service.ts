@@ -5,6 +5,7 @@ export class MainService {
     private readonly logger = new Logger(MainService.name);
 
     content(content: string) {
+        console.log(content)
         this.logger.log(content);
     }
 }
