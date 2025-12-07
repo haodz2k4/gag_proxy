@@ -8,4 +8,8 @@ export class MainService {
         console.log(content)
         this.logger.log(content);
     }
+
+    webHook(data: any) {
+        console.log(data.embeds[0].fields)
+    }
 }

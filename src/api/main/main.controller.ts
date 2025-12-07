@@ -13,7 +13,7 @@ export class MainController {
 
   @Post()
   webHook(@Body() data: any) {
-    console.log(data)
+    return this.mainService.webHook(data)
   }
 
   @Get(':content')
