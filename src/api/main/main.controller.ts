@@ -10,7 +10,7 @@ export class MainController {
   main() {
     console.log("Run here")
   }
-  
+
   @Post()
   webHook(@Body() data: any) {
     console.log(data)
@@ -19,5 +19,10 @@ export class MainController {
   @Get(':content')
   content(@Param('content') content: string) {
     return this.mainService.content(content);
+  }
+
+  @Post(':content')
+  siu(@Param('content') content: string) {
+    console.log(content)
   }
 }
