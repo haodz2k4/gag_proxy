@@ -10,6 +10,8 @@ export class MainService {
     }
 
     webHook(data: any) {
-        console.log(data.embeds[0].fields)
+        data.embeds.forEach((item) => {
+            console.log(item.fields)
+        })
     }
 }
