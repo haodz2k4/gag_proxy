@@ -37,14 +37,10 @@ export class MainService {
                     break;
             }
 
-            // Gửi message gốc sang đúng webhook
             await fetch(targetWebhook, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    content: `📩 Forwarded message từ **${username}**`,
-                    embeds: [item],
-                }),
+                body: data,
             });
 
             this.logger.log(`Sent webhook for user: ${username}`);
